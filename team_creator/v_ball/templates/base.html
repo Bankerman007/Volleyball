@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html> hi
+<head>
+
+    <title>{% block title %}{% endblock %}</title>
+    
+
+
+    
+        <style type="text/css">
+        .sidenav {
+            height:100%;
+            width:160px;
+            position:fixed;
+            z-index:1;
+            top:0;
+            Left:0;
+            background-color:#111;
+            overflow-x:hidden;
+            padding-top:20px;
+        }
+        .sidenav a {
+            padding: 20px 8px 6px 16px;
+            text-decoration:none;
+            font-size:25px;
+            color: #818181;
+            display:block;
+            }
+        
+    
+        
+    
+        .logo {
+            top:0;
+            position:fixed;
+            Left:160px;
+            z-index: 1;
+            height:100%;
+            width: 100%;
+    
+        } 
+        .text_entry {
+            top:150px;
+            position:fixed;
+            Left:200px;
+            z-index: 1;
+            height:100%;
+            width: 100%;
+
+        }
+
+        .enter_button {
+            margin-top:25px;
+            
+        }
+      
+        
+    
+        </style>    
+    
+    
+ </head>   
+
+ <body>
+    <div id="content", name = "content">
+        {% block content %}
+        {% endblock %} 
+    </div>
+
+                    
+    </div>
+    <div class = "sidenav">
+        <a href = ''>Waiting for Team</a>
+        <a href = "">Next To Play</a>
+    </div>
+    <div class = "logo">
+        <img src = "{% static 'usflag.png' %}" alt="My image" 
+        style="object-fit: fill;
+        width:1250px;
+        height:125px;"/>
+    </div>
+    
+    <div class = "text_entry">
+        <h1>Register</h1>
+        <p>Please fill in your name and level of play.</p>
+        <hr>
+        <label for="name"><b>Name</b></label>
+         <input type="text" >
+         <label for="skill_level"><b>Skill Level</b></label>
+         <input type="number" >
+         
+    
+    <div class = "enter_button">
+        <input type="button" style="width: 200px;" value= "Enter">
+
+    </div>
+    
+    </div>
+
+    
+
+
+</body>
+</html>
