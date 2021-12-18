@@ -22,5 +22,9 @@ urlpatterns = [
     path('base/', include('v_ball.urls')),
     path('register/', include('v_ball.urls')),
     path('success/', include('v_ball.urls')),
+    path('delete_players/', include('v_ball.urls')),
+    path('delete/', include('v_ball.urls')),
+    path('edit_player/', include('v_ball.urls')),
+    path('mix_teams/', include('v_ball.urls')),
 ]
 
