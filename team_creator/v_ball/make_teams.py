@@ -1,9 +1,11 @@
-from v_ball.prep_players import top_players1
-from v_ball.prep_players import other_players
+from v_ball.prep_playersv2 import prep_players
 from v_ball.models import Player
 from v_ball.models import Team
 
 def main():
+    # invoke the prep_players function on every call to dynamically mix the teams
+    # get both top and other players in one call using array deconstruction
+    [top_players1, other_players] = prep_players()
 
     team1 = top_players1[0]
     team2 = top_players1[1]
@@ -15,7 +17,7 @@ def main():
     newteam3 = [team3,]
     newteam4 = [team4,]
     newteam5 = [team5,]
-    
+
     for p in other_players:
         if len(newteam1) <= len(newteam2):
             newteam1.append(p)            
