@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 
 from v_ball.prep_players import prep_players
-=======
-from v_ball.prep_playersv2 import prep_players
->>>>>>> a6e30a472721f2a6989e4b482bcd7024530ea6c5
 from v_ball.models import Player
 from v_ball.models import Team
 
 def main():
-<<<<<<< HEAD
     [top_players1, other_players] = prep_players()
-=======
-    # invoke the prep_players function on every call to dynamically mix the teams
-    # get both top and other players in one call using array deconstruction
-    [top_players1, other_players] = prep_players()
-
->>>>>>> a6e30a472721f2a6989e4b482bcd7024530ea6c5
     team1 = top_players1[0]
     team2 = top_players1[1]
     team3 = top_players1[2]
