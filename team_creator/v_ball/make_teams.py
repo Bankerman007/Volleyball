@@ -1,10 +1,10 @@
-from v_ball.prep_players import top_players1
-from v_ball.prep_players import other_players
+
+from v_ball.prep_players import prep_players
 from v_ball.models import Player
 from v_ball.models import Team
 
 def main():
-
+    [top_players1, other_players] = prep_players()
     team1 = top_players1[0]
     team2 = top_players1[1]
     team3 = top_players1[2]
@@ -17,13 +17,13 @@ def main():
     newteam5 = [team5,]
     
     for p in other_players:
-        if len(newteam1) <= len(newteam2):
+        if len(newteam1) < 4:
             newteam1.append(p)            
-        elif len(newteam2) <= len(newteam3):
+        elif len(newteam2) < 4:
             newteam2.append(p)
-        elif len(newteam3) <= len(newteam4):
+        elif len(newteam3) < 4:
             newteam3.append(p)
-        elif len(newteam4) <= len(newteam5):
+        elif len(newteam4) < 4:
             newteam4.append(p)           
         else:
             newteam5.append(p)

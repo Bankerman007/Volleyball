@@ -3,29 +3,34 @@ from v_ball.models import Player
 
 
 
-lst= Player.objects.values('player_name', 'skill_level')
-players1 = []
+def prep_players():
+    lst= Player.objects.values('player_name', 'skill_level')
+    players1 = []  
+    
 
-for ele in lst:
-    for key, value in ele.items():
-        p = value
-        players1.append(p)
+    for ele in lst:
+        for key, value in ele.items():
+            p = value
+            players1.append(p)
 
-players = {players1[i]: players1[i + 1] for i in range(0, len(players1), 2)}
+    players = {players1[i]: players1[i + 1] for i in range(0, len(players1), 2)}
+    other_players = list(map(lambda p: p[0], filter(_other_players, players.items())))   
+    random.shuffle(other_players)
+    top_players1 = list(map(lambda p: p[0], filter(_top_players, players.items())))
 
-
-def top_players(player):
-    if players[player] == 4:
-        return players
+    return [top_players1, other_players]
+    
+def _top_players(player):
+    return player[1] == 4
         
-top_players1 = list(filter(top_players, players.keys()))
-
-def other_players(player):
-    if players[player] != 4:
-        return players
+def _other_players(player):
+    return player[1] != 4
         
-other_players = list(filter(other_players, players.keys()))
-random.shuffle(other_players)
+prep_players()     
+    
+        
+   
+
 
 
 

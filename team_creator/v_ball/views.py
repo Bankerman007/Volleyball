@@ -1,4 +1,6 @@
 from django.shortcuts import redirect, render
+from v_ball.teams_total_points import total_point_calc
+from v_ball.prep_players import prep_players
 from .forms import PlayerForm
 from django.http import HttpResponseRedirect, request
 from django.http import HttpResponse
@@ -6,8 +8,8 @@ from django import forms
 from .models import Team
 from .models import Player
 from v_ball.make_teams import main
-#from v_ball.teams_total_points import players_points1
-from v_ball.teams_total_points import red_team_points, blue_team_points, black_team_points, green_team_points, brown_team_points
+
+
 
 def base(request):
     return render(request, 'base.html',{})
@@ -16,6 +18,7 @@ def success(request):
     return render(request, 'success.html', {})
 
 def home(request):
+    [red_team_points, blue_team_points, black_team_points, green_team_points, brown_team_points] = total_point_calc()
     players1 = Player.objects.all().filter(team = 1)
     players2 = Player.objects.all().filter(team = 2)
     players3 = Player.objects.all().filter(team = 3)
@@ -30,7 +33,8 @@ def home(request):
     return render(request, 'home.html', {'players1': players1, 'players2': players2, 'players3': players3,'players4': players4,'players5': players5, 'points_red':points_red, 'points_blue': points_blue, 'points_black':points_black, 'points_green': points_green, 'points_brown': points_brown})
 
 def mix_teams(request):
-    main() 
+    prep_players()
+    main()
     return redirect('/')
 
 def register(request):
