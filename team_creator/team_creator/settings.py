@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['volley-ball-app.herokuapp.com']
 #ALLOWED_HOSTS = ["127.0.0.1"]
 
 
-# Application definition
+# Application definitions
 
 INSTALLED_APPS = [
     'django.contrib.admin',
