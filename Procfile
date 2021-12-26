@@ -1,1 +1,1 @@
-web: gunicorn team_creator.team_creator.wsgi.py
+web: gunicorn volleyball.team_creator.team_creator.wsgi.py
