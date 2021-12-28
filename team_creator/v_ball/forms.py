@@ -1,7 +1,5 @@
 from django import forms
 from django.forms import ModelForm
-from django.forms.fields import MultipleChoiceField
-from django.forms.widgets import Input
 from .models import Player
 from .models import Team
 

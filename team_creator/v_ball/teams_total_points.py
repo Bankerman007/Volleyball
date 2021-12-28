@@ -1,4 +1,3 @@
-#from v_ball.make_teams import newteam1, newteam2, newteam3, newteam4, newteam5
 from v_ball.models import Player 
 
 

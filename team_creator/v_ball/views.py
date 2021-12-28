@@ -2,10 +2,7 @@ from django.shortcuts import redirect, render
 from v_ball.teams_total_points import total_point_calc
 from v_ball.prep_players import prep_players
 from .forms import PlayerForm
-from django.http import HttpResponseRedirect, request
-from django.http import HttpResponse
-from django import forms
-from .models import Team
+from django.http import HttpResponseRedirect
 from .models import Player
 from v_ball.make_teams import main
 
