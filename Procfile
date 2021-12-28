@@ -1,1 +1,1 @@
-web: gunicorn team_creator.wsgi $PORT
+web: gunicorn team_creator.wsgi
