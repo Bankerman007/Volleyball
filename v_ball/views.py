@@ -8,6 +8,7 @@ from v_ball.make_teams import main
 
 
 
+
 def base(request):
     return render(request, 'base.html',{})
 
