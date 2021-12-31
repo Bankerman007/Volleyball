@@ -60,7 +60,7 @@ ROOT_URLCONF = 'team_creator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['team_creator/v_ball/templates/'],
+        'DIRS': ['/v_ball/templates/'],
                  
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,7 +126,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(PROJECT_ROOT, 'static')
-STATICFILES_DIRS = os.path.join(PROJECT_ROOT, 'static')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #MEDIA_URL = 'media/'
 
