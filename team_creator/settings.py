@@ -26,7 +26,7 @@ PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 SECRET_KEY='django-insecure-&e*)w_kye%b)%xb^k2rl8c2^63x9r_yypzbcs4l131u76oma8h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=True
+DEBUG=False
 
 ALLOWED_HOSTS = ['volley-ball-app.herokuapp.com']
 #ALLOWED_HOSTS = ["127.0.0.1"]
@@ -125,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT= os.path.join(PROJECT_ROOT, '/static/')
+STATIC_ROOT= os.path.join(PROJECT_ROOT, '/static')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #MEDIA_URL = 'media/'
 
