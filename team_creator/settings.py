@@ -60,7 +60,7 @@ ROOT_URLCONF = 'team_creator.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/v_ball/templates/'],
+        'DIRS': ['/team_creator/static/'],
                  
         'APP_DIRS': True,
         'OPTIONS': {
