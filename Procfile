@@ -1,1 +1,1 @@
-web: gunicorn volleyball.wgsi
+web: gunicorn team_creator.wgsi
