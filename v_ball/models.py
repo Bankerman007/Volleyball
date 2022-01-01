@@ -12,7 +12,7 @@ class Team(models.Model):
 
 
 class Player(models.Model):
-    player_name = models.CharField(max_length=30)
+    player_name = models.CharField(max_length=25)
     skill_level = models.IntegerField()
     team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, related_name="players")
 
