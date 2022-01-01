@@ -29,7 +29,7 @@ SECRET_KEY='django-insecure-&e*)w_kye%b)%xb^k2rl8c2^63x9r_yypzbcs4l131u76oma8h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG=True
 
-ALLOWED_HOSTS = ['volley-ball-app.herokuapp.com']
+ALLOWED_HOSTS = ["127.0.0.1",'volley-ball-app.herokuapp.com']
 ##ALLOWED_HOSTS = ["127.0.0.1"]
 
 
