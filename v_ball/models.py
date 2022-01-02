@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+## Create your models here.
 
 class Team(models.Model):
     team_name= models.CharField(max_length=30)
@@ -12,7 +12,7 @@ class Team(models.Model):
 
 
 class Player(models.Model):
-    player_name = models.CharField(max_length=25)
+    player_name = models.CharField(max_length=30)
     skill_level = models.IntegerField()
     team = models.ForeignKey(Team, on_delete=models.SET_NULL, null=True, related_name="players")
 
