@@ -1,5 +1,5 @@
 
-from v_ball.prep_players import prep_players
+from .prep_players import prep_players
 from v_ball.models import Player
 from v_ball.models import Team
 

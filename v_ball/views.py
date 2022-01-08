@@ -1,10 +1,10 @@
 from django.shortcuts import redirect, render
-from v_ball.teams_total_points import total_point_calc
-from v_ball.prep_players import prep_players
+from v_ball.scripts.teams_total_points import total_point_calc
+from v_ball.scripts.prep_players import prep_players
 from .forms import PlayerForm
 from django.http import HttpResponseRedirect
 from .models import Player
-from v_ball.make_teams import main
+from v_ball.scripts.make_teams import main
 
 
 
@@ -41,7 +41,7 @@ def register(request):
         form = PlayerForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/success')
+            return HttpResponseRedirect('/')
     else:
         form = PlayerForm
         if 'submitted' in request.GET:
@@ -62,7 +62,7 @@ def edit_player(request,id):
     form = PlayerForm(request.POST or None, instance=player)
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect('/delete_players')
+        return HttpResponseRedirect('/')
     return render(request, 'edit_player.html', {'player':player, 'form': form})
 
    

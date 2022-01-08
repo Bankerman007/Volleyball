@@ -1,4 +1,4 @@
-from v_ball.models import Player 
+from v_ball.models import Player
 
 
 def total_point_calc():
