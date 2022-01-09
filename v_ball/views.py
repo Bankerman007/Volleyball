@@ -33,7 +33,7 @@ def home(request):
 def mix_teams(request):
     prep_players()
     main()
-    return redirect('/')
+    return redirect('')
 
 def register(request):
     submitted = False
