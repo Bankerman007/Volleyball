@@ -132,8 +132,8 @@ STATIC_URL = '/static/'
 #STATIC_ROOT= os.path.join(BASE_DIR, 'v_ball/static')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates', 'static', 'staticfiles')),
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
-MEDIA_URL = '/images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
