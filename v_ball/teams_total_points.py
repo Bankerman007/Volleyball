@@ -43,5 +43,5 @@ def total_point_calc():
 
     return [red_team_points, blue_team_points, black_team_points, green_team_points, brown_team_points]
 
-total_point_calc()
+
 

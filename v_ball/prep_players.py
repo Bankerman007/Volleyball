@@ -26,7 +26,7 @@ def _top_players(player):
 def _other_players(player):
     return player[1] != 4
         
-prep_players()     
+    
     
         
    
