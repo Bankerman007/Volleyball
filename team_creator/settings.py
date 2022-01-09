@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY='django-insecure-&e*)w_kye%b)%xb^k2rl8c2^63x9r_yypzbcs4l131u76oma8h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG=True
+DEBUG=False
 
 ALLOWED_HOSTS = ["127.0.0.1", 'v-ball-app.herokuapp.com']
 
@@ -127,7 +127,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT= os.path.join(BASE_DIR, 'v_ball/static')
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates', 'static', 'staticfiles')),
 MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
 MEDIA_URL = '/media/'
