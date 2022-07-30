@@ -9,12 +9,12 @@ def main():
     team2 = top_players1[1]
     team3 = top_players1[2]
     team4 = top_players1[3]
-    team5 = top_players1[4]
+    #team5 = top_players1[4]
     newteam1 = [team1,]
     newteam2 = [team2,]
     newteam3 = [team3,]
     newteam4 = [team4,]
-    newteam5 = [team5,]
+    #newteam5 = [team5,]
 
     for p in other_players:
         if len(newteam1) < 4:
@@ -23,10 +23,10 @@ def main():
             newteam2.append(p)
         elif len(newteam3) < 4:
             newteam3.append(p)
-        elif len(newteam4) < 4:
-            newteam4.append(p)           
         else:
-            newteam5.append(p)
+            newteam4.append(p)           
+        #else:
+            #newteam5.append(p)
     
 
     red_team = Team.objects.get(team_name = 'Red')
