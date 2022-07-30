@@ -55,10 +55,10 @@ def main():
         ct.team = green_team
         ct.save()
 
-    for i in newteam5:
-        ct = Player.objects.get(player_name=i)
-        ct.team = brown_team
-        ct.save()
+    #for i in newteam5:
+        #ct = Player.objects.get(player_name=i)
+        #ct.team = brown_team
+        #ct.save()
 
 
 
