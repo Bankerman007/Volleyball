@@ -33,7 +33,7 @@ def main():
     blue_team = Team.objects.get(team_name = 'Blue')
     black_team = Team.objects.get(team_name = 'Black')
     green_team = Team.objects.get(team_name = 'Green')
-    brown_team = Team.objects.get(team_name = 'Brown')
+    #brown_team = Team.objects.get(team_name = 'Brown')
 
     for i in newteam1:
         ct = Player.objects.get(player_name = i)
