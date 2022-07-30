@@ -17,11 +17,11 @@ def main():
     #newteam5 = [team5,]
 
     for p in other_players:
-        if len(newteam1) < 4:
+        if len(newteam1) < 5:
             newteam1.append(p)            
-        elif len(newteam2) < 4:
+        elif len(newteam2) < 5:
             newteam2.append(p)
-        elif len(newteam3) < 4:
+        elif len(newteam3) < 5:
             newteam3.append(p)
         else:
             newteam4.append(p)           

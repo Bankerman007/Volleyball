@@ -27,7 +27,7 @@ def home(request):
     points_black = black_team_points
     points_green = green_team_points
     # points_brown = brown_team_points
-
+# return render(request, 'home.html', {'players1': players1, 'players2': players2, 'players3': players3,'players4': players4,'players5': players5, 'points_red':points_red, 'points_blue': points_blue, 'points_black':points_black, 'points_green': points_green, 'points_brown': points_brown})
     return render(request, 'home.html', {'players1': players1, 'players2': players2, 'players3': players3,'players4': players4, 'points_red':points_red, 'points_blue': points_blue, 'points_black':points_black, 'points_green': points_green})
 
 def mix_teams(request):
